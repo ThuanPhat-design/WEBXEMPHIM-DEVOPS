@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Layout from '../Layout/Layout';
 import PopularMovies from '../Components/Home/PopularMovies';
 import Banner from '../Components/Home/Banner';
-import Promos from '../Components/Home/Promos';
 import TopRated from '../Components/Home/TopRated';
 import Category from '../Components/Home/CategorizeMovies';
 import movieSections from '../Components/Config/movieSections';
