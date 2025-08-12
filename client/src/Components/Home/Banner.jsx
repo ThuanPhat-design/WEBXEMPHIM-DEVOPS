@@ -84,7 +84,7 @@ function Banner({ movies, isLoading }) {
                         <div className="flex-colo w-24 h-24 p-5 mb-4 rounded-full bg-dry text-subMain text-4xl">
                             <RiMovie2Line/>
                             <p className="text-border text-sm">
-                                It seem's like we dont have any movie
+                                It seem&apos;s like we don&apos;t have any movie
                             </p>
                         </div>
                     </div>
