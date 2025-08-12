@@ -1,5 +1,5 @@
 // src/components/Home/Category.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide }      from 'swiper/react';
 import { Navigation, Autoplay }     from 'swiper/modules';
 
