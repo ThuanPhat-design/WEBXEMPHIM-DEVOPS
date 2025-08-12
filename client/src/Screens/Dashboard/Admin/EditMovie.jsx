@@ -124,7 +124,7 @@ function EditMovie() {
                     </div>
                     ) : (
                         <div className="flex flex-col gap-6">
-                            <h2 className="text-xl font-bold">{Chỉnh sửa "{movie?.name}"}</h2>
+                            <h2 className="text-xl font-bold">{'Chỉnh sửa "{movie?.name}"'}</h2>
                             <div className='w-full grid md:grid-cols-2 gap-6'>
                                 <div className="w-full">
                                     <Input
