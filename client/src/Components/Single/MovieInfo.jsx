@@ -1,7 +1,7 @@
 import React from 'react';
 import FlexMovieItems from '../FlexMovieItems';
 import { FaPlay, FaShareAlt } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 import Rating from '../Home/Stars';
 import { useSelector } from 'react-redux';
