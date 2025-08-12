@@ -1,7 +1,6 @@
 // Dashboard/AccountPlans.jsx
 import React, { useState } from 'react';
 import SideBar from './SideBar';
-import { useNavigate } from 'react-router-dom';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
 const plans = [
