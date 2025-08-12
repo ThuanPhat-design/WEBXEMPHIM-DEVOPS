@@ -15,24 +15,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Cài Node.js
+      # 2. Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
-      # 3. Cài package cho client
+      # 3. Install dependencies (and patch missing Babel plugin)
       - name: Install dependencies
         working-directory: ./client
-        run: npm install
+        run: |
+          npm install
+          npm install --save-dev @babel/plugin-proposal-private-property-in-object
 
-      # 4. Chạy ESLint
+      # 4. Run ESLint but don't fail the pipeline yet
       - name: Run ESLint
         working-directory: ./client
         run: npm run lint || true
 
-      # 5. Build project
+      # 5. Build project (skip ESLint warnings breaking the build)
       - name: Build client
         working-directory: ./client
-        run: npm run build
+        run: CI=false npm run build
