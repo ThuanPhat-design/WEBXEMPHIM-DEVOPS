@@ -1,0 +1,38 @@
+name: CI/CD for Client
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout source code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Cài Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      # 3. Cài package cho client
+      - name: Install dependencies
+        working-directory: ./client
+        run: npm install
+
+      # 4. Chạy ESLint
+      - name: Run ESLint
+        working-directory: ./client
+        run: npm run lint
+
+      # 5. Build project
+      - name: Build client
+        working-directory: ./client
+        run: npm run build
