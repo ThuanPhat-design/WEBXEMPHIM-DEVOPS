@@ -2,14 +2,9 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide }      from 'swiper/react';
 import { Navigation, Autoplay }     from 'swiper/modules';
-import {
-  BsBookmarkStar,
-  BsCaretLeftFill,
-  BsCaretRightFill
-} from 'react-icons/bs';
+
 import { FaPlay }                   from 'react-icons/fa';
 import { Link }                     from 'react-router-dom';
-import Titles                       from '../Titles';
 import Loader                       from '../Notfications/Loader';
 import { Empty }                    from '../Notfications/Empty';
 
@@ -18,8 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
 export default function Category({ title,Icon,language, genre, movies = [], isLoading }) {
-  const [prevEl, setPrevEl] = useState(null);
-  const [nextEl, setNextEl] = useState(null);
+
 
 const filtered = movies.filter(m => {
     const okGenre    = genre    ? m.category === genre    : true;
