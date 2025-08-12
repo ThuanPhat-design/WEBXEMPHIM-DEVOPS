@@ -12,7 +12,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { movieValidation } from '../../../Components/Validation/MovieValidation';
-import { createMovieAction, getMovieByIdAction, removeCastAction, updateMovieAction } from '../../../Redux/Actions/MoviesActions';
+import { getMovieByIdAction, removeCastAction, updateMovieAction } from '../../../Redux/Actions/MoviesActions';
 import { toast } from 'react-toastify';
 import { InlineError } from '../../../Components/Notfications/Error';
 import { ImagePreview } from '../../../Components/ImagePreview';
@@ -35,7 +35,7 @@ function EditMovie() {
     const { isLoading, isError, movie } = useSelector(
         (state) => state.getMovieById
     );
-    const { isLoading: editLoading, isError: editError, isSuccess } = useSelector(
+    const { isError: editError, isSuccess } = useSelector(
         (state) => state.updateMovie
     );
     const { casts } = useSelector((state) => state.casts);
@@ -45,7 +45,6 @@ function EditMovie() {
         register,
         handleSubmit,
         formState: { errors },
-        reset,
         setValue,
     } = useForm({
         resolver: yupResolver(movieValidation)
@@ -125,7 +124,7 @@ function EditMovie() {
                     </div>
                     ) : (
                         <div className="flex flex-col gap-6">
-                            <h2 className="text-xl font-bold">Chỉnh sửa "{movie?.name}"</h2>
+                            <h2 className="text-xl font-bold">{Chỉnh sửa "{movie?.name}"}</h2>
                             <div className='w-full grid md:grid-cols-2 gap-6'>
                                 <div className="w-full">
                                     <Input
