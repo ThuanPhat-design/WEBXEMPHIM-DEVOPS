@@ -80,7 +80,7 @@ function MenuDrawer({ drawerOpen, toggleDrawer }) {
                         </NavLink>
                     ))}
                 </div></div>
-                <div clasName="flex-rows gap-6 w-full">
+                <div className="flex-rows gap-6 w-full">
                     {LinkDatas.map((link,index) => (
                         <a href={link.link} key={index} target="_blank" rel="noreferrer" className="flex-colo w-12 h-12 transitions hover:bg-subMain text-lg bg-white rounded bg-opacity-30">
                             <link.icon/>
