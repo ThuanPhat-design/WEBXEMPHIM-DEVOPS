@@ -53,7 +53,6 @@ const plans = [
 
 function AccountPlans() {
   const [selectedPlanId, setSelectedPlanId] = useState(null);
-  const navigate = useNavigate();
 
   const handleSelect = (id) => {
     if (selectedPlanId === id) {
