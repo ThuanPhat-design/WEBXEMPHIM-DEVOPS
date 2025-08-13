@@ -90,6 +90,7 @@ export const ControlledTextarea = React.forwardRef(
         </label>
       )}
       <textarea
+        autoFocus
         id={name}
         name={name}
         ref={ref}
