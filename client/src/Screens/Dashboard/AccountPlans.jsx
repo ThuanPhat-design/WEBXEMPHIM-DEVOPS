@@ -1,7 +1,6 @@
 // Dashboard/AccountPlans.jsx
 import React, { useState } from 'react';
 import SideBar from './SideBar';
-import { useNavigate } from 'react-router-dom';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
 const plans = [
@@ -53,7 +52,6 @@ const plans = [
 
 function AccountPlans() {
   const [selectedPlanId, setSelectedPlanId] = useState(null);
-  const navigate = useNavigate();
 
   const handleSelect = (id) => {
     if (selectedPlanId === id) {

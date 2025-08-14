@@ -60,7 +60,7 @@ function MovieRates({ movie }) {
                 {/* Write review */}
                 <form onSubmit={handleSubmit(onSubmit)} className="xl:col-span-2 w-full flex flex-col gap-8">
                     <h3 className="text-xl text-text font-semibold">
-                        Review "{movie?.name}"
+                        {`Review "${movie?.name}"`}
                     </h3>
                     <p className="text-sm leading-7 font-medium text-border">
                         Hãy cảm nhận bộ phim bạn đã xem nào </p>

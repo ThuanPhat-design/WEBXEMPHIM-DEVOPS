@@ -12,7 +12,7 @@ function Filters(props) {
     setLanguage,
     rates,
     setRates,
-  } = props?.data;
+  } = props?.data || {};
 
   const Filter = [
     {
