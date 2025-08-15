@@ -21,16 +21,10 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: function (origin, callback) {
-    // Cho phép nếu không có origin (VD: Postman) hoặc origin nằm trong danh sách
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  origin: [
+    'https://thuanphat-design.github.io',
+    'https://thuanphat-design.github.io/WEBXEMPHIM-DEVOPS'
+  ],
   credentials: true
 }));
 

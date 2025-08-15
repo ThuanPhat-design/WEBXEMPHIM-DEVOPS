@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API = axios.create({
-  baseURL: "https://webxemphim-devops.vercel.app/api", // Đúng domain backend
-  withCredentials: true, // nếu có dùng cookie/session
+const Axios = axios.create({
+  baseURL: 'https://webxemphim-devops-hbs6qkg84-thuanphat-designs-projects.vercel.app/api',
+  withCredentials: true
 });
 
-export default API;
+export default Axios;
