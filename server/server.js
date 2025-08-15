@@ -8,6 +8,7 @@ import moviesRouter from "./Routes/MoviesRouter.js";
 import categoriesRouter from './Routes/CategoriesRouter.js';
 import Uploadrouter from './Controllers/UploadFile.js';
 import tmdbRouter from './Routes/tmdbRouter.js';
+import app from "./app.js";
 
 dotenv.config();
 
@@ -15,8 +16,8 @@ const app = express();
 
 const corsOptions = {
   origin: [
-    'https://thuanphat-design.github.io',
-    'https://thuanphat-design.github.io/WEBXEMPHIM-DEVOPS',
+    "https://thuanphat-design.github.io",
+    "https://thuanphat-design.github.io/WEBXEMPHIM-DEVOPS",
     'http://localhost:3000'
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
