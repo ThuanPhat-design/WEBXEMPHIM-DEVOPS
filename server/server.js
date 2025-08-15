@@ -29,8 +29,8 @@ app.use(cors({
 }));
 
 
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // Preflight requests
+app.use(cors(allowedOrigins));
+app.options("*", cors(allowedOrigins)); // Preflight requests
 
 app.use(express.json());
 
