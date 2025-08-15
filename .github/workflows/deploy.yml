@@ -51,5 +51,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./client/build
 
-      - name: Show deployed URL
-        run: echo "::notice title=Deployment URL::🚀 https://ThuanPhat-design.github.io/WEBXEMPHIM-DEVOPS/"
+      - name: Set deployed URL
+        id: vars
+        run: echo "url=https://ThuanPhat-design.github.io/WEBXEMPHIM-DEVOPS/" >> $GITHUB_OUTPUT
+
+      - name: Deployment Summary
+        run: echo "### 🚀 [View your site here](${{ steps.vars.outputs.url }})" >> $GITHUB_STEP_SUMMARY
