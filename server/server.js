@@ -16,7 +16,7 @@ import cors from 'cors';
 
 app.use(cors({
   origin: [
-    'https://thuanphat-design.github.io', // domain frontend thật sự
+    'https://thuanphat-design.github.io/WEBXEMPHIM-DEVOPS', // domain frontend thật sự
     'http://localhost:3000'
   ],
   credentials: true
