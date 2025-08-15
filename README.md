@@ -26,7 +26,7 @@ Một ứng dụng web xem phim trực tuyến mô phỏng giao diện và trả
 1. Clone repository:
 
    ```bash
-   git clone https://github.com/QuangVinh2708/WEBXEMPHIM.git
+   git clone https://github.com/ThuanPhat-design/WEBXEMPHIM-DEVOPS.git
    ```
 2. Tạo file `.env` trong thư mục `server` với các biến môi trường:
 
