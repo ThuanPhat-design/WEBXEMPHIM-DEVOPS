@@ -23,17 +23,9 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
-<<<<<<< HEAD
 };
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions)); // Xử lý preflight
-=======
-}));
-
-
-app.use(cors(allowedOrigins));
-app.options("*", cors(allowedOrigins)); // Preflight requests
->>>>>>> 562b1a9a0a8e6f7010cb477964b4638c7b0114c0
 
 app.use(express.json());
 
