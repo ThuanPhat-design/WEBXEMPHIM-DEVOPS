@@ -12,7 +12,15 @@ import { searchMovie, getMovieDetails } from "./config/tmdb.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://thuanphat-design.github.io', // GitHub Pages
+    'https://thuanphat-design.github.io/WEBXEMPHIM-DEVOPS', // full path nếu cần
+    'http://localhost:3000' // local dev
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Kết nối DB
