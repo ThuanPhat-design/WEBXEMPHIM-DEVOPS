@@ -1,7 +1,12 @@
-import axios from 'axios';
+import axios from "axios";
+
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://webxemphim-devops-hbs6qkg84-thuanphat-designs-projects.vercel.app/api"
+    : "http://localhost:5000/api";
 
 const Axios = axios.create({
-  baseURL: 'https://webxemphim-devops-hbs6qkg84-thuanphat-designs-projects.vercel.app/api',
+  baseURL: API_URL,
   withCredentials: true
 });
 

@@ -34,7 +34,7 @@ const filtered = movies.filter(m => {
         ) : filtered.length > 0 ? (
           <Swiper
             modules={[Navigation, Autoplay]}
-            navigation={{ prevEl, nextEl }}
+            navigation
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             speed={800}
             loop={filtered.length > 5}
