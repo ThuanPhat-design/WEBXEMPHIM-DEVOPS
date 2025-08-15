@@ -52,4 +52,4 @@ jobs:
           publish_dir: ./client/build
 
       - name: Show deployed URL
-        run: echo -e "\033[1;32m🚀 Deployed at:\033[0m \033[4;34mhttps://ThuanPhat-design.github.io/WEBXEMPHIM-DEVOPS/\033[0m"
+        run: echo "::notice title=Deployment URL::🚀 https://ThuanPhat-design.github.io/WEBXEMPHIM-DEVOPS/"
