@@ -1,32 +1,37 @@
-name: Deploy React Client to GitHub Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
     branches:
-      - main   # mỗi khi push vào main sẽ deploy
+      - main  # Deploy khi push vào nhánh main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Lấy source code
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Cài Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
+      # 3. Cài package cho client
       - name: Install dependencies
         working-directory: ./client
         run: npm install
 
+      # 4. Build React app
       - name: Build project
         working-directory: ./client
         run: npm run build
 
+      # 5. Deploy lên GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
