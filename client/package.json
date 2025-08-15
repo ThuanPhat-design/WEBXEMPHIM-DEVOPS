@@ -2,6 +2,7 @@
   "name": "movie_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ThuanPhat-design.github.io/WEBXEMPHIM-DEVOPS",
   "dependencies": {
     "@headlessui/react": "1.7",
     "@heroicons/react": "^2.1.5",
@@ -36,7 +37,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
