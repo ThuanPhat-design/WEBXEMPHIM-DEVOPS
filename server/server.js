@@ -15,6 +15,7 @@ const app = express();
 
 app.use(cors({
   origin: [
+    'https://thuanphat-design.github.io',
     'https://thuanphat-design.github.io/WEBXEMPHIM-DEVOPS', // đúng domain GitHub Pages
     'http://localhost:3000' // để test local
   ],
