@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WEBXEMPHIM-DEVOPS/static/css/main.6b88311c.css",
+    "main.js": "/WEBXEMPHIM-DEVOPS/static/js/main.9ad35a8a.js",
+    "index.html": "/WEBXEMPHIM-DEVOPS/index.html",
+    "main.6b88311c.css.map": "/WEBXEMPHIM-DEVOPS/static/css/main.6b88311c.css.map",
+    "main.9ad35a8a.js.map": "/WEBXEMPHIM-DEVOPS/static/js/main.9ad35a8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b88311c.css",
+    "static/js/main.9ad35a8a.js"
+  ]
+}
