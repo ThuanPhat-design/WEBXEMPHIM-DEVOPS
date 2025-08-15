@@ -3,37 +3,55 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Deploy khi push vào nhánh main
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Lấy source code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Cài Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
-      # 3. Cài package cho client
       - name: Install dependencies
         working-directory: ./client
         run: npm install
 
-      # 4. Build React app
       - name: Build project
         working-directory: ./client
         run: npm run build
 
-      # 5. Deploy lên GitHub Pages
+      - name: Upload build folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: ./client/build
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: react-build
+          path: ./client/build
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./client/build
+
+      - name: Show deployed URL
+        run: echo -e "\033[1;32m🚀 Deployed at:\033[0m \033[4;34mhttps://ThuanPhat-design.github.io/WEBXEMPHIM-DEVOPS/\033[0m"
+
+
