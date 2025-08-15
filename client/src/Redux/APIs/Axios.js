@@ -1,11 +1,18 @@
 import axios from 'axios';
 
+let baseURL = '';
+
+if (process.env.NODE_ENV === 'production') {
+  // Domain backend trên Vercel (API)
+  baseURL = 'https://webxemphim-devops.vercel.app/api';
+} else {
+  // Local dev
+  baseURL = 'http://localhost:5000/api';
+}
+
 const Axios = axios.create({
-  baseURL:
-    process.env.NODE_ENV === 'production'
-      ? 'https://webxemphim-devops-hbs6qkg84-thuanphat-designs-projects.vercel.app/api' // backend Vercel
-      : 'http://localhost:5000/api', // local dev
-  withCredentials: true // Cho phép gửi cookie/session
+  baseURL,
+  withCredentials: true
 });
 
 export default Axios;
