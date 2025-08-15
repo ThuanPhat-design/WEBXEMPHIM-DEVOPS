@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/WEBXEMPHIM-DEVOPS/static/css/main.6b88311c.css",
-    "main.js": "/WEBXEMPHIM-DEVOPS/static/js/main.e192ba23.js",
+    "main.js": "/WEBXEMPHIM-DEVOPS/static/js/main.f5599448.js",
     "index.html": "/WEBXEMPHIM-DEVOPS/index.html",
     "main.6b88311c.css.map": "/WEBXEMPHIM-DEVOPS/static/css/main.6b88311c.css.map",
-    "main.e192ba23.js.map": "/WEBXEMPHIM-DEVOPS/static/js/main.e192ba23.js.map"
+    "main.f5599448.js.map": "/WEBXEMPHIM-DEVOPS/static/js/main.f5599448.js.map"
   },
   "entrypoints": [
     "static/css/main.6b88311c.css",
-    "static/js/main.e192ba23.js"
+    "static/js/main.f5599448.js"
   ]
 }
